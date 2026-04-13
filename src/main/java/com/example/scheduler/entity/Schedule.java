@@ -26,7 +26,6 @@ public class Schedule {
     private String author;
     // 생
     protected Schedule() { // JPA가 쓰는 생성자
-
     }
 
     public Schedule(String title, String content, String author, String password) {
@@ -35,7 +34,14 @@ public class Schedule {
         this.author = author;
         this.password = password;
     }
+
+
     // 기
+    public void update(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
     public Long getId() {
         return id;
     }
@@ -63,4 +69,5 @@ public class Schedule {
     public String getAuthor() {
         return author;
     }
+
 }

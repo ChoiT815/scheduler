@@ -53,4 +53,14 @@ public class ScheduleService {
         return new ScheduleResponseDto(schedule);
     }
 
+    public ScheduleResponseDto updateSchedule(Long id, ScheduleRequestDto requestDto) {
+        Schedule schedule = scheduleRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("해당 일정이 없습니다."));
+        if (!schedule.getPassword().equals(requestDto.getPassword())) {
+            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
+        }
+        schedule.update(requestDto.getTitle(), requestDto.getAuthor());
+        return new ScheduleResponseDto(schedule);
+    }
+
 }
