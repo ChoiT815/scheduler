@@ -1,5 +1,6 @@
 ## ERD
 ![ERD](erd.png)
+
 필드명타입옵션idBIGINTPK, AUTO_INCREMENTtitleVARCHAR(50)contentTEXTauthorVARCHAR(30)passwordVARCHAR(20)createdAtDATETIMEupdatedAtDATETIME
 
 ## API 목록
