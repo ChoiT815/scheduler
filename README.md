@@ -5,7 +5,13 @@
 idBIGINTPK, AUTO_INCREMENTtitleVARCHAR(50)contentTEXTauthorVARCHAR(30)passwordVARCHAR(20)createdAtDATETIMEupdatedAtDATETIME
 
 ## API 목록
-API명MethodURL일정 생성POST/schedules전체 일정 조회GET/schedules단건 일정 조회GET/schedules/{id}일정 수정PUT/schedules/{id}일정 삭제DELETE/schedules/{id}
+API명
+MethodURL
+일정 생성 POST/schedules
+전체 일정 조회 GET/schedules 
+단건 일정 조회 GET/schedules/{id}
+일정 수정 PUT/schedules/{id}
+일정 삭제 DELETE/schedules/{id}
 
 상세 명세
 ## 일정 생성
