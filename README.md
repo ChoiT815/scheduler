@@ -1,7 +1,8 @@
 ## ERD
 ![ERD](erd.png)
 
-필드명타입옵션idBIGINTPK, AUTO_INCREMENTtitleVARCHAR(50)contentTEXTauthorVARCHAR(30)passwordVARCHAR(20)createdAtDATETIMEupdatedAtDATETIME
+필드명타입옵션
+idBIGINTPK, AUTO_INCREMENTtitleVARCHAR(50)contentTEXTauthorVARCHAR(30)passwordVARCHAR(20)createdAtDATETIMEupdatedAtDATETIME
 
 ## API 목록
 API명MethodURL일정 생성POST/schedules전체 일정 조회GET/schedules단건 일정 조회GET/schedules/{id}일정 수정PUT/schedules/{id}일정 삭제DELETE/schedules/{id}
