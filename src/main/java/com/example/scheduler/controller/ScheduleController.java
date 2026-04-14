@@ -3,7 +3,7 @@ package com.example.scheduler.controller;
 import com.example.scheduler.dto.ScheduleRequestDto;
 import com.example.scheduler.dto.ScheduleResponseDto;
 import com.example.scheduler.service.ScheduleService;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,10 +35,15 @@ public class ScheduleController {
         return scheduleService.getSchedule(id);
     }
 
-    @Transactional
     @PutMapping("/{id}")
     public ScheduleResponseDto updateSchedule(@PathVariable Long id, @RequestBody ScheduleRequestDto requestDto) {
         return scheduleService.updateSchedule(id, requestDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteSchedule(@PathVariable Long id, @RequestParam String password) {
+       scheduleService.deleteSchedule(id, password);
+       return ResponseEntity.noContent().build();
     }
 
 
