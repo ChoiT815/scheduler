@@ -1,14 +1,18 @@
 package com.example.scheduler.dto;
 
-public class ScheduleRequestDto {
-    // 속
-    private String title;
-    private String content;
-    private String author;
-    private String password;
-    // 생
 
-    // 기
+/**
+ * 일정 요청 DTO
+ * 클라이언트가 서버로 보내는 데이터를 담는 클래스
+ */
+public class ScheduleRequestDto {
+    // ==================== 속성 ====================
+    private String title;    // 일정 제목
+    private String content;  // 일정 내용
+    private String author;   // 작성자명
+    private String password; // 비밀번호 (수정/삭제 시 검증용)
+
+    // ==================== Getter ====================
     public String getTitle() {
         return title;
     }
